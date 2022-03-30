@@ -1,0 +1,455 @@
+{% extends 'basket/base.html' %}}
+{% load static %}
+{% block css_additional%}
+<link rel="stylesheet" href="{% static 'basket/css/about.css'   %}">{% endblock   %}
+{% block content %}
+<!--<div style="width: 15em;border: 1px solid #333; padding: 1px ; display: flex; flex-wrap: nowrap; ">-->
+<!--</div>-->
+
+<!--{% for ttt in el3 %}{{ttt}}<br><br>-->
+
+<!--{% endfor %}<br><br>-->
+
+{{home100list}}<br><br>
+{{vizit100list2}}<br><br>
+{{home100list2}}<br><br><br><br><br><br>
+
+<div class="flex">
+<div class="col-md-6">
+        {% for ttt in el2 %}
+          <br><br>{{ttt.1}}  {{ttt.2}} {{ttt.0}}  {{ttt.1}}  {{ttt.2}} {{ttt.0}}
+
+           {% for tt in ttt.items %}
+            <div class="boxin3">{{tt.0}} {{tt.1}} </div>
+
+            {% endfor %}
+{% endfor %}</div>
+    <div class="col-md-6 ">
+        {% for ttt in el22 %}
+          <br><br>{{ttt.1}}  {{ttt.2}} {{ttt.0}}  {{ttt.1}}  {{ttt.2}} {{ttt.0}}
+
+           {% for tt in ttt.items %}
+            <div class="boxin2">{{tt.0}} {{tt.1}} </div>
+
+            {% endfor %}{% endfor %}<br>  </div>
+
+    </div>
+<br><br>
+{{home100list}}<br><br>
+{{vizit100list2}}<br><br>
+{{home100list2}}<br><br><br><br><br><br>
+<div class="flex2">
+
+        {% for ttt in el3 %}
+    {{ttt.1}}
+          <div class="col-md-6">
+{% for tt in ttt.items %}
+          <br><span style="background:{% if ttt.0 in home0list2 %}#f79696{% elif ttt.0 in vizit100list %}#b6f5b6{% else %}none{% endif %}">
+        {{tt.0}} {{tt.1}} </span>{% endfor %}</div>
+
+           {% endfor %}  </div>
+
+{{home100list}}<br><br>
+{{vizit100list2}}<br><br>
+{{home100list2}}<br><br><br><br><br><br>
+
+
+<div class="flex2">
+<div class="col-md-6">
+        {% for ttt in el2 %}
+          <br><br>{{ttt.1}}  {{ttt.2}} {{ttt.0}}  {{ttt.1}}  {{ttt.2}} {{ttt.0}}
+
+           {% for tt in ttt.items %}
+            <div class="boxin2">{{tt.0}} {{tt.1}} </div>
+
+            {% endfor %}
+{% endfor %}</div>
+    <div class="col-md-6 ">
+        {% for ttt in el22 %}
+          <br><br>{{ttt.1}}  {{ttt.2}} {{ttt.0}}  {{ttt.1}}  {{ttt.2}} {{ttt.0}}
+
+           {% for tt in ttt.items %}
+            <div class="boxin2">{{tt.0}} {{tt.1}} </div>
+
+            {% endfor %}{% endfor %}<br>  </div>
+
+    </div>
+
+
+<div class="wrapper3">
+    <div class="col-md-6">
+        {% for ttt in el3 %}
+          <br><br>{{ttt.1}}  {{ttt.2}} {{ttt.0}}  {{ttt.1}}  {{ttt.2}} {{ttt.0}}
+
+           {% for tt in ttt.items %}
+            <div class="boxin2">{{tt.0}} {{tt.1}}</div>
+
+            {% endfor %}{% endfor %}<br></div>
+    <div class="col-md-6 flex">
+        <div class="col-md-6">1</div>
+        <div class="col-md-6">2</div>
+
+    </div>
+</div>
+
+<br><br>
+
+<span class="wrapper2">
+{% for ttt in el2 %}
+    <br>{{ttt.1}}  {{ttt.2}} {{ttt.0}}  {{ttt.1}}  {{ttt.2}} {{ttt.0}}<br>
+  <span class="boxbox">
+   {% for tt in ttt.items %}
+    <span class="box">
+      <span class="boxin"><span style="background:{% if tt.0 in home0list2 %}#f79696{% elif tt.0 in vizit100list %}#b6f5b6{% else %}none{% endif %}">
+        {{tt.0}} </span></span>
+      <span class="boxin"><span style="background:{% if tt.0 in home0list2 %}#f79696{% elif tt.0 in vizit100list %}#b6f5b6{% else %}none{% endif %}">
+        {{tt.1|cut:'[' |cut:']' |slice:":40"}}</span></span></span>
+    {% endfor %}
+<br>
+
+   {% for tt in ttt.items %}
+    <span class="box">
+      <span class="boxin"><span style="background:{% if tt.0 in home0list2 %}#f79696{% elif tt.0 in vizit100list %}#b6f5b6{% else %}none{% endif %}">
+        {{tt.0}} </span></span>
+      <span class="boxin"><span style="background:{% if tt.0 in home0list2 %}#f79696{% elif tt.0 in vizit100list %}#b6f5b6{% else %}none{% endif %}">
+        {{tt.1|cut:'[' |cut:']' |slice:":40"}}</span></span></span>
+   {% endfor %}
+  </span><br>
+{% endfor %}
+</span>
+
+
+<div class="wrapper3">
+{% for ttt in el2 %}
+    <br>{{ttt.1}}  {{ttt.2}} {{ttt.0}}  {{ttt.1}}  {{ttt.2}} {{ttt.0}}<br>
+  <div class="boxbox">
+   {% for tt in ttt.items %}
+    <div class="box">
+      <div class="boxin"><span style="background:{% if tt.0 in home0list2 %}#f79696{% elif tt.0 in vizit100list %}#b6f5b6{% else %}none{% endif %}">
+        {{tt.0}} </span></div>
+      <div class="boxin"><span style="background:{% if tt.0 in home0list2 %}#f79696{% elif tt.0 in vizit100list %}#b6f5b6{% else %}none{% endif %}">
+        {{tt.1|cut:'[' |cut:']' |slice:":40"}}</span></div></div><br>
+    {% endfor %}
+
+    <br>
+   {% for tt in ttt.items %}
+    <div class="box">
+      <div class="boxin"><span style="background:{% if tt.0 in home0list2 %}#f79696{% elif tt.0 in vizit100list %}#b6f5b6{% else %}none{% endif %}">
+        {{tt.0}} </span></div>
+      <div class="boxin"><span style="background:{% if tt.0 in home0list2 %}#f79696{% elif tt.0 in vizit100list %}#b6f5b6{% else %}none{% endif %}">
+        {{tt.1|cut:'[' |cut:']' |slice:":40"}}</span></div></div>
+   {% endfor %}
+  </div><br>
+{% endfor %}
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<div class="wrapper3">
+{% for tt in ptszitog  %}<br><br><br>
+{% for t in tt.items  %}
+    <div class="box">
+      <div class="boxin"><span style="background:{% if t.0 in  home0list2 %}#f79696{% elif t.0 in  home100list2  %}#b6f5b6{% else  %}none{% endif %}">
+        {{t.0}} </span></div>
+      <div class="boxin"><span style="background:{% if t.0 in  home0list2 %}#f79696{% elif t.0 in  home100list2  %}#b6f5b6{% else  %}none{% endif %}">
+        {{t.1|cut:'[' |cut:']' |slice:":40"}}</span></div></div>
+{% endfor %}{% endfor %}</div>
+<br>
+
+{% for t in zaprosbdnew  %}
+{% if t == 'Eric Gordon' %}
+<span style="background:#FFFFCC">{{t}}.</span>
+{% endif %}
+{{t}}<br>
+{% endfor %}
+<span style="background:#FFFFCC">Обычный текст.</span>
+
+<div class="wrapper">
+{% for t in el  %}
+   <div class="abox">
+       <div class="zbox"> {{t.p3time}} <br> {{t.p3status}}<br> {{t.p3teamviz}} {{t.p3teamvizwl}}{{ t.0|safe }}   <!--  {{t.0}}--></div>
+       <div class="zbox"><br><br>{{t.p3teamhome}} {{t.p3teamvizwlh}}{{ t.0|safe }} </div></div>
+      <!--  {{t.p3status}}<br>{{t.p3teamviz}}{{t.p3teamvizwl}}     vs    {{t.p3teamhome}}{{t.p3teamvizwlh}}<br> {{sp2.1|unordered_list}}-->
+{% endfor %}
+</div>
+
+
+
+<h1>{{ title }}y111</h1>
+{{el}}
+<div class="wrapper2">
+{% for t in el  %}
+
+<div style="width: 15em;border: 1px solid #333;  padding: 18px 12px; display: flex; flex-direction: row;   ">
+
+     {{t.p3time}}{{t.0}}
+
+</div>{% endfor %}</div>
+
+
+<br>
+{{ lll }}{{ trotowtime }}
+<br><br>
+
+
+<table>
+    <colgroup>
+    <col span="7" style="background:Khaki"><!-- С помощью этой конструкции задаем цвет фона для первых двух столбцов таблицы-->
+    <col style="background-color:LightCyan"><!-- Задаем цвет фона для следующего (одного) столбца таблицы-->
+  </colgroup>
+ <tr><td>11111111111111111111</td> <td>22222222222222222</td></tr>
+    <tr>11111111111111111111</td> <td>22222222222222222</td></tr>
+
+ 333333333<td>
+
+
+
+    <td>
+{% for x in sp2  %}
+
+  {% for k,r in x.items %}
+   {{ k }} {{ r|cut:'[' |cut:']' |cut:'{' |cut:'}'|slice:":25"}} <br>
+{% endfor %}<br>
+{% endfor %}
+</td>
+</td>
+
+</table>
+
+++++++++++++++++
+<br>
+<br>
+
+{% for k in sp2 %}
+   {{k}} {{k.values}}   <br><br>
+{% if r == 0%}
+{% endif %}
+{% endfor %}
+|unordered_list
+++++++++++++++++<br>
+<br>
+{% for e,r in sp2.0.items %}
+  {{e }} {{r|force_escape }}<br>
+{% endfor %}
+<br>
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxx
+<br>
+{% for i in lll %}
+{% if i == 0%}
+    {% for e,r in sp2.1.items %}
+    {{e }} {{r|slice:":10" }}<br>
+    {% endfor %}
+{% endif %}
+{% for e,r in sp2.i.items %}
+{{ e }} {{ r }}
+kjlkjl
+{% endfor %}
+{% endfor %}
+
+
+{% endblock %}
+
+h1
+   {
+   background-color:#992525;
+   text_color:#992525
+}
+
+html {
+ color:black;
+}
+
+
+body {
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+.wrapper {
+  color: black;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  grid-template-rows: 1fr 1fr 1fr  ;
+  grid-template-columns: 1fr 1fr 1fr;
+  /*border: 0px solid gray; */
+}
+
+.wrapper2 {
+  color: black;
+  display: grid;
+  grid-template-columns:1fr;
+grid-auto-flow: row;
+   border: 5px solid gray;
+
+}
+
+.wrapper3 {
+  color: black;
+  display: flex;
+
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+
+  /*grid-template-rows: 1fr 1fr  1fr 1fr  ;
+  grid-template-columns: 1fr 1fr ;*/
+  /*border: 0px solid gray; */
+}
+/*grid-auto-rows:minmax(50px, auto);
+  grid-auto-columns:minmax(350px, 360); */
+
+.box {
+  /* grid-template-rows:1fr 1fr;
+  grid-template-columns: 1fr 1fr; background-color: #20262e;
+  grid-template-columns: repeat(auto-fit, minmax(22%, 3fr));   */
+  display: inline-grid;
+grid-auto-flow: column;
+
+  width: 600px;
+  align-content: space-between;
+grid-template-columns: 1fr     ;
+
+  border-radius: 0px;
+  padding: 1px;
+  font-size: 14px;
+  border: 1px solid gray;
+}
+
+.boxin {
+  /* grid-template-rows:1fr 1fr;
+  grid-template-columns: 1fr 1fr; background-color: #20262e;
+  grid-template-columns: repeat(auto-fit, minmax(22%, 3fr));   */
+  display: grid;
+grid-auto-flow: column;
+
+  width: 250px;
+  align-content: space-between;
+
+  border-radius: 0px;
+  padding: 5px;
+  font-size: 14px;
+  border: 0px solid gray;
+}
+
+.boxbox {
+  /* grid-template-rows:1fr 1fr;
+  grid-template-columns: 1fr 1fr; background-color: #20262e;
+  grid-template-columns: repeat(auto-fit, minmax(22%, 3fr));   */
+  display: inline-grid;
+grid-auto-flow: column;
+ /*
+grid-template-rows:    1fr 1fr 1fr 1fr    1fr 1fr 1fr 1fr    1fr 1fr 1fr 1fr    1fr 1fr 1fr 1fr      ; */
+grid-template-rows: repeat(17, minmax(20px, 1fr));
+  align-content: space-between;
+
+  border-radius: 0px;
+  padding: 1px;
+  font-size: 14px;
+  border: 1px solid gray;
+
+  grid-template-columns:  repeat(2, minmax(700px, 1fr));
+
+}
+
+.abox {
+  /* background-color: #20262e;*/
+  display: flex;
+  color: blue;
+  flex-direction:  row;
+
+  border-radius: 3px;
+  padding: 0px;
+  font-size: 14px;
+  border: 0px solid black;
+  justify-content: space-evenly;
+  margin:2px;
+}
+
+.zbox {
+  display: flex;
+  flex-direction:  row;
+
+  width: 39%;
+  height: 60%;
+justify-content: center;
+  align-content: space-between;
+  border: 1px solid gray;
+background-color:pink;
+margin:0px;
+padding: 10px;
+}
+
+ /*
+.flex {
+display: flex;
+    flex-wrap: nowrap;
+
+
+}
+.col-md-6 {
+    height: 400px;
+    width: 45%;
+
+} */
+
+.flex {
+display: flex;
+    flex-wrap: wrap;
+ height: 90%;
+    width: 45%;
+flex-shrink: 1;
+
+}
+
+.col-md-6 {
+
+    height: 400px;
+    width: 45%;
+
+}
+
+.boxin2 {
+  /* grid-template-rows:1fr 1fr;
+  grid-template-columns: 1fr 1fr; background-color: #20262e;
+  grid-template-columns: repeat(auto-fit, minmax(22%, 3fr));   */
+  display: grid;
+  width: 90%;
+  border-radius: 0px;
+  padding: 1px;
+  font-size: 14px;
+  border: 1px solid gray;
+}
+
+.flex2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:  column;
+
+}
+
+.boxin3 {
+  /* grid-template-rows:1fr 1fr;
+  grid-template-columns: 1fr 1fr; background-color: #20262e;
+  grid-template-columns: repeat(auto-fit, minmax(22%, 3fr));   */
+  display: inline;
+  width: 40%;
+  border-radius: 0px;
+  padding: 1px;
+  font-size: 14px;
+  border: 1px solid gray;
+}
+
+.grid3 {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns:1fr 1fr ;
+}
